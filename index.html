@@ -1,10 +1,10 @@
-Here’s the same “website-style” template, but now every section pulls **only** from your resume (no extra projects or AI memory). Update image URLs, links and text as you like.
+Below is the cleaned-up, “resume-only” portfolio—no project placeholders, just the sections from your CV. Save as `index.html` and swap out fonts/colors or add your own logo as desired.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pranav Yatagiri – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
@@ -18,7 +18,7 @@ Here’s the same “website-style” template, but now every section pulls **on
       --text: #222;
       --secondary: #6e6e6e;
     }
-    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body {
       font-family: 'Roboto', sans-serif;
       background: var(--bg);
@@ -29,65 +29,77 @@ Here’s the same “website-style” template, but now every section pulls **on
       position: fixed; top:0; left:0; right:0;
       background: rgba(43,43,43,0.9);
       backdrop-filter: blur(5px);
-      padding: 1rem 2rem; display:flex; justify-content:space-between; align-items:center;
-      z-index:1000; transition: padding 0.3s;
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 1000; transition: padding 0.3s;
     }
-    header.shrink { padding:0.5rem 2rem; }
-    header h1 { color: var(--light); font-size:1.5rem; font-weight:700; }
+    header.shrink { padding: 0.5rem 2rem; }
+    header h1 { color: var(--light); font-size: 1.5rem; font-weight: 700; }
     nav a {
-      color: var(--light); margin-left:1.5rem; text-decoration:none; font-weight:500;
+      color: var(--light); margin-left: 1.5rem; text-decoration: none; font-weight: 500;
       transition: color 0.2s;
     }
     nav a:hover { color: var(--accent); }
+
     .hero {
-      height:100vh; background: linear-gradient(135deg,#ccc,#eee);
-      display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
-      padding:0 1rem;
+      height: 100vh;
+      background: linear-gradient(135deg, #ccc, #eee);
+      display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+      padding: 0 1rem;
     }
-    .hero h2 { font-size:2.5rem; margin-bottom:1rem; color: var(--dark); }
-    .hero p { font-size:1.1rem; margin-bottom:2rem; color: var(--secondary); max-width:600px; }
+    .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--dark); }
+    .hero p { font-size: 1.1rem; margin-bottom: 2rem; color: var(--secondary); max-width: 600px; }
     .btn {
-      padding:0.75rem 1.5rem; background: var(--dark); color: var(--light);
-      text-decoration:none; font-weight:500; border-radius:4px;
+      padding: 0.75rem 1.5rem;
+      background: var(--dark); color: var(--light);
+      text-decoration: none; font-weight: 500; border-radius: 4px;
       transition: background 0.3s, transform 0.2s;
     }
     .btn:hover { background: var(--accent); transform: translateY(-2px); }
-    main { margin-top:100vh; }
-    section { padding:4rem 2rem; max-width:1000px; margin:auto; }
+
+    main { margin-top: 100vh; }
+    section { padding: 4rem 2rem; max-width: 900px; margin: auto; }
     h2 {
-      font-size:1.8rem; margin-bottom:1rem; position:relative;
+      font-size: 1.8rem; margin-bottom: 1rem; position: relative;
     }
     h2::after {
-      content:''; position:absolute; bottom:0; left:0;
-      height:3px; width:50px; background: var(--accent);
+      content: ''; position: absolute; bottom: 0; left: 0;
+      height: 3px; width: 50px; background: var(--accent);
     }
+
     /* Skill Bars */
-    .skill { margin-bottom:1rem; }
-    .skill-name { margin-bottom:0.3rem; font-weight:500; }
+    .skill { margin-bottom: 1rem; }
+    .skill-name { margin-bottom: 0.3rem; font-weight: 500; }
     .skill-bar {
-      height:8px; background: var(--accent); border-radius:4px; overflow:hidden;
+      height: 8px; background: var(--accent); border-radius: 4px; overflow: hidden;
     }
     .skill-bar div {
-      height:100%; background: var(--dark); width:0;
+      height: 100%; background: var(--dark); width: 0;
       animation: fillBar 1s forwards;
     }
-    @keyframes fillBar {
-      to { width: var(--fill); }
-    }
-    /* Lists */
+    @keyframes fillBar { to { width: var(--fill); } }
+
     ul { list-style: none; }
-    ul li { margin-bottom:0.5rem; }
-    /* Contact */
-    .contact-icons { display:flex; gap:1.5rem; justify-content:center; margin-top:1rem; }
-    .contact-icons a {
-      font-size:1.5rem; color: var(--dark); transition: color 0.2s, transform 0.2s;
+    ul li { margin-bottom: 0.5rem; }
+
+    .contact-icons {
+      display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem;
     }
-    .contact-icons a:hover { color: var(--accent); transform: scale(1.1); }
+    .contact-icons a {
+      font-size: 1.5rem; color: var(--dark);
+      transition: color 0.2s, transform 0.2s;
+    }
+    .contact-icons a:hover {
+      color: var(--accent); transform: scale(1.1);
+    }
+
     footer {
-      text-align:center; padding:1.5rem; background: var(--dark); color: var(--light); font-size:0.9rem;
+      text-align: center; padding: 1.5rem; background: var(--dark); color: var(--light);
+      font-size: 0.9rem;
     }
   </style>
   <script>
+    // shrink header on scroll
     window.addEventListener('scroll', () => {
       document.querySelector('header')
         .classList.toggle('shrink', window.scrollY > 50);
@@ -118,7 +130,7 @@ Here’s the same “website-style” template, but now every section pulls **on
     <!-- About -->
     <section id="about">
       <h2>About Me</h2>
-      <p>Experienced in turning complex data into actionable insights, optimizing team performance, and building secure, scalable web solutions. Passionate about advancing technology and solving real‐world problems.</p>
+      <p>Turning complex data into actionable insights, optimizing team performance, and building secure, scalable web solutions. Passionate about advancing technology and solving real-world problems.</p>
     </section>
 
     <!-- Skills -->
@@ -158,15 +170,15 @@ Here’s the same “website-style” template, but now every section pulls **on
         <li>
           <strong>Web Developer</strong>, 1stop.ai (Remote)  
           <em>Jun 2022 – Jul 2023</em><br>
-          • Built and maintained full-stack features using Python and modern web frameworks.<br>
-          • Collaborated with cross-functional teams to design RESTful APIs and secure data pipelines.
+          • Built full-stack features with Python &amp; modern web frameworks.<br>
+          • Designed RESTful APIs and secure data pipelines in cross-functional teams.
         </li>
       </ul>
     </section>
 
     <!-- Certifications -->
     <section id="certs">
-      <h2>Certifications & Courses</h2>
+      <h2>Certifications &amp; Courses</h2>
       <ul>
         <li>Programming for Everybody, Univ. of Michigan (Aug 2019 – Sep 2020)</li>
         <li>Intro to AI, IBM (Aug 2019 – Sep 2020)</li>
@@ -189,7 +201,7 @@ Here’s the same “website-style” template, but now every section pulls **on
   </main>
 
   <footer>
-    © 2025 Pranav Yatagiri • Built with HTML &amp; CSS
+    © 2025 Pranav Yatagiri • Built with HTML & CSS
   </footer>
 
 </body>
